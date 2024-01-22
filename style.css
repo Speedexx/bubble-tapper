@@ -1,0 +1,171 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    background: url("images/bg4.png");
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+@media only screen and (max-width: 400px) {
+    #info {
+        font-size: 0.80rem;
+        width: 70%;
+    }
+
+    .score-board {
+        font-size: 0.95rem;
+    }
+
+    #endGameInfo {
+        font-size: 0.75rem;
+    }
+
+    .button-restart{
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #info {
+        font-size: 1rem;
+        width: 50%;
+    }
+
+    .score-board {
+        font-size: 1.1rem;
+    }
+
+    #endGameInfo {
+        font-size: 1rem;
+    }
+
+    .button-restart{
+        font-size: 0.9rem;
+    }
+}
+
+#info {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(240, 246, 249);
+    opacity: 0.85;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column p {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+}
+
+.row p {
+    display: flex;
+    align-items: center;
+}
+
+.hearts img {
+    height: 50px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.hearts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.button-restart {
+    background-color: #008CBA;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#endGameInfo {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    padding: 10px;
+    width: 50%;
+    border: solid 1px black;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(240, 246, 249);
+}
+
+.score-board {
+    position: absolute;
+    flex-direction: column;
+    color: black;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    z-index: 20;
+    min-width: 100%;
+}
+
+#gameCanvas {
+    display: block;
+    margin: auto;
+    z-index: 10;
+}

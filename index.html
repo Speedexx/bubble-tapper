@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <title>Bubble Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="score-board">
+            <div class="column">
+                <div class="row">
+                    <p>Wynik: <span id="score">0</span></p>
+                    <p>
+                        <img src="images/accuracy-icon.png" style="height: 1.45rem;">
+                        <span id="accuracy">0%</span>
+                    </p>
+                    <p>
+                        <img src="images/time-icon.png" style="height: 1.2rem;">
+                        <span id="timer">60</span> sekund
+                    </p>
+                    <span class="hearts"><img id="hearts-image" src="images/hearts-1.png"></span>
+                </div>
+                <button id="restartButton" class="button-restart" style="display: none;">Restart</button>
+            </div>
+        </div>
+
+        <div id="info">
+            <p> <b>Instrukcja:</b></p>
+            <p>Zestrzel jak najwięcej bąbelków klikając na nie myszką lub dotknij ich na ekranie dotykowym.</p>
+            <p>Za zestrzelenie <span style="text-shadow: 2px 2px 5px skyblue;">niebieskiego</span> bąbelka gracz dostaje
+                <b>1 pkt</b>.
+            </p>
+            <p>Za zestrzelenie <span style="text-shadow: 2px 2px 5px yellow;">żółtego</span> bąbelka gracz dostaje <b>3
+                    pkt</b>.</p>
+            <p>Za zestrzelenie <span style="text-shadow: 2px 2px 5px red;">czerwonego</span> bąbelka gracz traci <b>1
+                    pkt</b>.</p>
+            <br>
+            <p>Powodzenia!</p>
+            <button id="startButton" class="button">Start</button>
+        </div>
+        <div id="endGameInfo">
+            <div class="column">
+                <p>Twój wynik: <span id="finalScore"></span></p>
+                <p> <img src="images/accuracy-icon.png" style="height: 1.45rem;"> Celność: <span id="finalAccuracy"></span>%
+                </p>
+                <p> <img src="images/time-icon.png" style="height: 1.2rem;"> Czas gry: <span id="finalPlaytime"></span></p>
+                <button id="restartButtonEndGame" class="button-restart" style="display: none;">Restart</button>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="engine.js"></script>
+</body>
+
+</html>
